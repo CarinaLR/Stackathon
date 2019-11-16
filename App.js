@@ -1,7 +1,8 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { StyleSheet, Text, View, Image, Button } from 'react-native';
 
 export default function App() {
+  const [outputText, setOutputText] = useState('Old Text');
   return (
     <View style={styles.container}>
       <Text style={styles.getmefit}>Get Me Fit!</Text>
@@ -9,6 +10,7 @@ export default function App() {
         Based on how much weight you would like to lose we can provide you a
         weekly meal plan that will help you to reach your goal!
       </Text>
+      <Text>{outputText}</Text>
       <Image
         source={{
           uri:
@@ -16,7 +18,10 @@ export default function App() {
         }}
         style={{ width: 250, height: 250 }}
       />
-      <Button title="Get Started" />
+      <Button
+        title="Get Started"
+        onPress={() => setOutputText('Text Change')}
+      />
     </View>
   );
 }
