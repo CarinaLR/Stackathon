@@ -1,48 +1,46 @@
 import React, { useState } from 'react';
-import { StyleSheet, Text, View, Image, Button } from 'react-native';
+import {
+  StyleSheet,
+  Text,
+  View,
+  Image,
+  Button,
+  TextInput,
+  FlatList,
+} from 'react-native';
+
+import GoalItem from './components/GoalItem';
+import GoalInput from './components/GoalInput';
 
 export default function App() {
-  const [outputText, setOutputText] = useState('Old Text');
+  const [weightLossGoals, setWeightLossGoals] = useState([]);
+
+  const addGoalHandler = goalTitle => {
+    setWeightLossGoals(currentGoals => [
+      ...currentGoals,
+      { key: Math.random().toString(), value: goalTitle },
+    ]);
+  };
   return (
-    <View style={styles.container}>
-      <Text style={styles.getmefit}>Get Me Fit!</Text>
-      <Text style={styles.welcome}>
-        Based on how much weight you would like to lose we can provide you a
-        weekly meal plan that will help you to reach your goal!
-      </Text>
-      <Text>{outputText}</Text>
-      <Image
-        source={{
-          uri:
-            'https://assets.vancouverisawesome.com/wp-content/uploads/2017/12/31113259/shutterstock_749969473.jpg',
-        }}
-        style={{ width: 250, height: 250 }}
-      />
-      <Button
-        title="Get Started"
-        onPress={() => setOutputText('Text Change')}
+    <View style={styles.screen}>
+      <GoalInput onAddGoal={addGoalHandler} />
+      <FlatList
+        keyExtractor={(item, index) => item.key}
+        data={weightLossGoals}
+        renderItem={itemData => (
+          <GoalItem
+            onDelete={() => console.log('item deleted')}
+            title={itemData.item.value}
+          />
+        )}
       />
     </View>
   );
 }
 
 const styles = StyleSheet.create({
-  container: {
-    flex: 1,
+  screen: {
+    padding: 50,
     backgroundColor: 'grey',
-    alignItems: 'center',
-    justifyContent: 'space-around',
-  },
-  getmefit: {
-    fontSize: 50,
-    textAlign: 'center',
-    color: 'orange',
-    margin: 10,
-  },
-  welcome: {
-    color: 'white',
-    fontSize: 20,
-    marginLeft: 20,
-    marginRight: 20,
   },
 });
