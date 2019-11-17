@@ -1,13 +1,5 @@
 import React, { useState } from 'react';
-import {
-  StyleSheet,
-  Text,
-  View,
-  Image,
-  Button,
-  TextInput,
-  FlatList,
-} from 'react-native';
+import { StyleSheet, View, Image, Button, FlatList, Text } from 'react-native';
 
 import GoalItem from './components/GoalItem';
 import GoalInput from './components/GoalInput';
@@ -21,26 +13,68 @@ export default function App() {
       { key: Math.random().toString(), value: goalTitle },
     ]);
   };
+
+  const removeGoalHandler = goalId => {
+    setWeightLossGoals(currentGoals => {
+      return currentGoals.filter(goal => goal.id !== goalId);
+    });
+  };
+
   return (
-    <View style={styles.screen}>
-      <GoalInput onAddGoal={addGoalHandler} />
-      <FlatList
-        keyExtractor={(item, index) => item.key}
-        data={weightLossGoals}
-        renderItem={itemData => (
-          <GoalItem
-            onDelete={() => console.log('item deleted')}
-            title={itemData.item.value}
-          />
-        )}
+    <View style={styles.container}>
+      <Text style={styles.getmefit}>Get Me Fit!</Text>
+      <Text style={styles.welcome}>
+        Based on how much weight you would like to lose we can provide you a
+        weekly meal plan that will help you to reach your goal!
+      </Text>
+      <View style={styles.screen}>
+        <GoalInput onAddGoal={addGoalHandler} />
+        <FlatList
+          keyExtractor={(item, index) => item.key}
+          data={weightLossGoals}
+          renderItem={itemData => (
+            <GoalItem
+              id={itemData.item.id}
+              onDelete={removeGoalHandler}
+              title={itemData.item.value}
+            />
+          )}
+        />
+      </View>
+      <Image
+        source={{
+          uri:
+            'https://assets.vancouverisawesome.com/wp-content/uploads/2017/12/31113259/shutterstock_749969473.jpg',
+        }}
+        style={{ width: 250, height: 250 }}
       />
     </View>
   );
 }
 
 const styles = StyleSheet.create({
+  container: {
+    flex: 2,
+    backgroundColor: 'grey',
+    alignItems: 'center',
+    justifyContent: 'space-around',
+  },
+  getmefit: {
+    padding: 30,
+    fontSize: 50,
+    textAlign: 'center',
+    color: 'orange',
+    margin: 10,
+  },
+  welcome: {
+    color: 'white',
+    fontSize: 20,
+    marginLeft: 20,
+    marginRight: 20,
+  },
   screen: {
-    padding: 50,
+    flex: 1,
+    padding: 40,
     backgroundColor: 'grey',
   },
 });
