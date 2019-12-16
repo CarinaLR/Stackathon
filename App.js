@@ -46,7 +46,12 @@ export default function App() {
           uri:
             'https://assets.vancouverisawesome.com/wp-content/uploads/2017/12/31113259/shutterstock_749969473.jpg',
         }}
-        style={{ width: 250, height: 250 }}
+        style={{
+          width: 350,
+          height: 650,
+          marginBottom: 30,
+          flex: 2,
+        }}
       />
     </View>
   );
@@ -54,8 +59,8 @@ export default function App() {
 
 const styles = StyleSheet.create({
   container: {
-    flex: 2,
-    backgroundColor: 'grey',
+    flex: 1,
+    backgroundColor: '#A9A9A9',
     alignItems: 'center',
     justifyContent: 'space-around',
   },
@@ -74,7 +79,8 @@ const styles = StyleSheet.create({
   },
   screen: {
     flex: 1,
-    padding: 40,
-    backgroundColor: 'grey',
+    paddingBottom: 10,
+    paddingTop: 10,
+    backgroundColor: '#A9A9A9',
   },
 });
