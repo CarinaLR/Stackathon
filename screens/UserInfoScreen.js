@@ -3,7 +3,7 @@ import React, { useState } from 'react';
 import { StyleSheet, View, Image, Button, FlatList, Text } from 'react-native';
 
 import GoalItem from '../components/GoalItem';
-import GoalInput from '..GoalInput/components/GoalInput';
+import GoalInput from '../components/GoalInput';
 
 class UserInfoScreen extends React.Component {
   constructor() {
@@ -104,18 +104,3 @@ const styles = StyleSheet.create({
     color: '#2e78b7',
   },
 });
-
-// import React from 'react';
-// import { View, Text, StyleSheet, Button } from 'react-native';
-
-// const UserInfoScreen = props => {
-//   return (
-//     <View>
-//       <Text>HERE</Text>
-//     </View>
-//   );
-// };
-
-// const styles = StyleSheet.create({});
-
-// export default UserInfoScreen;
