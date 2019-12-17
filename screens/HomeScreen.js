@@ -1,10 +1,12 @@
 import React, { useState } from 'react';
 import { StyleSheet, View, Image, Button, FlatList, Text } from 'react-native';
+import { createAppContainer } from 'react-navigation';
+import { createStackNavigator } from 'react-navigation-stack';
 
 import GoalItem from '../components/GoalItem';
 import GoalInput from '../components/GoalInput';
 
-export default function HomeScreen() {
+export default function HomeScreen({ navigation }) {
   const [weightLossGoals, setWeightLossGoals] = useState([]);
 
   const addGoalHandler = goalTitle => {
@@ -49,9 +51,14 @@ export default function HomeScreen() {
         style={{
           width: 350,
           height: 450,
-          marginBottom: 30,
+          marginBottom: 10,
           flex: 2,
         }}
+      />
+      <Button
+        title="Continue"
+        style={styles.continue}
+        onPress={() => navigation.navigate('Info')}
       />
     </View>
   );
@@ -63,25 +70,36 @@ const styles = StyleSheet.create({
     backgroundColor: '#A9A9A9',
     alignItems: 'center',
     justifyContent: 'space-around',
+    marginTop: 1,
   },
   getmefit: {
     flex: 1,
-    padding: 30,
+    padding: 10,
     fontSize: 50,
     textAlign: 'center',
     color: 'orange',
     margin: 10,
   },
   welcome: {
+    flex: 1,
     color: 'white',
     fontSize: 15,
     marginLeft: 20,
     marginRight: 20,
+    padding: 10,
   },
   screen: {
     flex: 1,
     paddingBottom: 10,
-    paddingTop: 30,
+    paddingTop: 10,
     backgroundColor: '#A9A9A9',
+  },
+  continue: {
+    color: '#B0C4DE',
+    height: 15,
+    borderRadius: 12,
+    alignItems: 'flex-end',
+    paddingBottom: 5,
+    flex: 1,
   },
 });
