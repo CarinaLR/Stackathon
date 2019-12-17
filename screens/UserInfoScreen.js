@@ -21,9 +21,9 @@ class UserInfoScreen extends React.Component {
         <Image
           source={{
             uri:
-              'https://assets.vancouverisawesome.com/wp-content/uploads/2017/12/31113259/shutterstock_749969473.jpg',
+              'https://images.unsplash.com/photo-1556817411-31ae72fa3ea0?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1050&q=80',
           }}
-          style={{ width: 250, height: 250 }}
+          style={{ width: 350, height: 350 }}
         />
       </View>
     );
