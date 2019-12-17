@@ -23,11 +23,11 @@ const styles = StyleSheet.create({
   //   borderWidth: 1,
   // },
   text: {
-    padding: 20,
+    padding: 5,
     alignItems: 'center',
   },
   Input: {
-    height: 60,
+    height: 30,
     backgroundColor: 'orange',
     opacity: 0.5,
     marginVertical: 10,

@@ -48,7 +48,7 @@ export default function HomeScreen() {
         }}
         style={{
           width: 350,
-          height: 650,
+          height: 450,
           marginBottom: 30,
           flex: 2,
         }}
@@ -65,6 +65,7 @@ const styles = StyleSheet.create({
     justifyContent: 'space-around',
   },
   getmefit: {
+    flex: 1,
     padding: 30,
     fontSize: 50,
     textAlign: 'center',
@@ -73,14 +74,14 @@ const styles = StyleSheet.create({
   },
   welcome: {
     color: 'white',
-    fontSize: 20,
+    fontSize: 15,
     marginLeft: 20,
     marginRight: 20,
   },
   screen: {
     flex: 1,
     paddingBottom: 10,
-    paddingTop: 10,
+    paddingTop: 30,
     backgroundColor: '#A9A9A9',
   },
 });
