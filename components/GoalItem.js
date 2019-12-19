@@ -14,15 +14,8 @@ const GoalItem = props => {
 };
 
 const styles = StyleSheet.create({
-  // listGoals: {
-  //   color: 'white',
-  //   padding: 10,
-  //   marginVertical: 10,
-  //   backgroundColor: 'orange',
-  //   borderColor: 'black',
-  //   borderWidth: 1,
-  // },
   text: {
+    color: 'white',
     padding: 5,
     alignItems: 'center',
   },

@@ -67,7 +67,7 @@ export default function HomeScreen({ navigation }) {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: '#A9A9A9',
+    backgroundColor: '#696969',
     alignItems: 'center',
     justifyContent: 'space-around',
     marginTop: 1,
@@ -92,7 +92,7 @@ const styles = StyleSheet.create({
     flex: 1,
     paddingBottom: 10,
     paddingTop: 10,
-    backgroundColor: '#A9A9A9',
+    backgroundColor: '#696969',
   },
   continue: {
     color: '#B0C4DE',

@@ -6,7 +6,9 @@ export default function ReportScreen() {
     <View style={styles.container}>
       <View style={styles.text}>
         <Text style={styles.getmefit}>Get Me Fit!</Text>
-        <Text>Here is your meal plan for this week!</Text>
+        <Text style={styles.textLabel}>
+          Here is your meal plan for this week!
+        </Text>
       </View>
       <View style={styles.block}>
         <View style={styles.image}>
@@ -30,18 +32,18 @@ export default function ReportScreen() {
       </View>
       <View style={styles.block}>
         <View style={styles.labels}>
-          <Text>Breakfast</Text>
+          <Text style={styles.textLabel}>Breakfast</Text>
         </View>
         <View style={styles.labels}>
-          <Text>Snak Options</Text>
+          <Text style={styles.textLabel}>Snak Options</Text>
         </View>
       </View>
       <View style={styles.block}>
         <View style={styles.labels}>
-          <Text>Lunch</Text>
+          <Text style={styles.textLabel}>Lunch</Text>
         </View>
         <View style={styles.labels}>
-          <Text>Dinner</Text>
+          <Text style={styles.textLabel}>Dinner</Text>
         </View>
       </View>
       <View style={styles.block}>
@@ -71,7 +73,7 @@ export default function ReportScreen() {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: '#A9A9A9',
+    backgroundColor: '#696969',
     alignItems: 'center',
     justifyContent: 'space-around',
   },
@@ -107,5 +109,8 @@ const styles = StyleSheet.create({
   },
   block: {
     flexDirection: 'row',
+  },
+  textLabel: {
+    color: 'white',
   },
 });
