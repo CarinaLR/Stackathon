@@ -1,4 +1,4 @@
-<<<<<<< HEAD
+
 **#GET ME FIT!**
 
 ##A mobile app that provides a weekly meal plan to the user based on how much weight the user would like to lose.
