@@ -91,6 +91,7 @@ const styles = StyleSheet.create({
     paddingBottom: 30,
     marginBottom: 15,
     borderRadius: 5,
+    width: 30,
   },
   hand: {
     padding: 80,
