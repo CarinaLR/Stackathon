@@ -18,4 +18,4 @@ The first attempt was built with Vanilla JavaScript, HTML, and CSS files.
 
 ![GET ME FIT HOME SCREEN](/assets/HomeScreen.png)
 ![GET ME FIT USER FORM](/assets/UserFormScreen.png)
-![GET ME FIT WEEKLY MEAL PLAN](/assests/WeeklyMealPlanScreen.png)
+![GET ME FIT WEEKLY MEAL PLAN](/assets/WeeklyMealPlanScreen.png)
