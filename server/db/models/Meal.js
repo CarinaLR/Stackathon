@@ -13,21 +13,21 @@ const Meal = db.define('meal', {
   },
   category: {
     type: DataTypes.ENUM,
-    values: ['protein', 'vegetable', 'fruit', 'carb'],
+    values: ['protein', 'vegetable', 'fruit', 'carb', 'fats', 'sweets'],
     allowNull: false,
     validate: {
-      isIn: [['protein', 'vegetable', 'fruit', 'carb']],
+      isIn: [['protein', 'vegetable', 'fruit', 'carb', 'fats', 'sweets']],
     },
   },
   calories: {
     type: Sequelize.INTEGER,
     validate: {
-      min: 10,
-      max: 3000,
+      min: 0,
+      max: 5000,
     },
   },
   quantity: {
-    type: Sequelize.STRING,
+    type: Sequelize.INTEGER,
   },
   description: {
     type: Sequelize.TEXT,
