@@ -1,4 +1,3 @@
-
 **GET ME FIT!**
 
 A mobile app that provides a weekly meal plan to the user based on how much weight the user would like to lose.
@@ -19,5 +18,4 @@ The first attempt was built with Vanilla JavaScript, HTML, and CSS files.
 
 ![GET ME FIT HOME SCREEN](/assets/HomeScreen.png)
 ![GET ME FIT USER FORM](/assets/UserFormScreen.png)
-![GET ME FIT WEEKLY MEAL PLAN](/assets/WeeklyMealPlanScreen.png)
-
+![GET ME FIT WEEKLY MEAL PLAN](/assests/WeeklyMealPlanScreen.png)
