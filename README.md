@@ -17,5 +17,7 @@ The first attempt was built with Vanilla JavaScript, HTML, and CSS files.
 - Download the Expo Client app from the app store: https://apps.apple.com/us/app/expo-client/id982107779
 
 ![GET ME FIT HOME SCREEN](/assets/HomeScreen.png)
+
 ![GET ME FIT USER FORM](/assets/UserFormScreen.png)
+
 ![GET ME FIT WEEKLY MEAL PLAN](/assets/WeeklyMealPlanScreen.png)
