@@ -35,7 +35,7 @@ export default function ReportScreen() {
           <Text style={styles.textLabel}>Breakfast</Text>
         </View>
         <View style={styles.labels}>
-          <Text style={styles.textLabel}>Snak Options</Text>
+          <Text style={styles.textLabel}>Snack Options</Text>
         </View>
       </View>
       <View style={styles.block}>
